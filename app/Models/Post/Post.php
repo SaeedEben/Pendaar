@@ -2,10 +2,32 @@
 
 namespace App\Models\Post;
 
+use App\Models\User\User;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class Post
+ *
+ * @package App\Models\Post
+ *
+ * @property int    $id
+ *
+ * @property string $title
+ * @property string $body
+ *
+ * @property string $category
+ *
+ * @property User   $user
+ * @property int    $user_id
+ *
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
+ */
 class Post extends Model
 {
+    protected $table = 'posts';
+
     const MEMORABLE = 'memorable';
     const SAD       = 'sad';
     const HAPPY     = 'happy';
@@ -16,4 +38,26 @@ class Post extends Model
         self::HAPPY,
         self::POLITIC,
     ];
+
+    // ------------------------------------ Relations ------------------------------------
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class, 'post_tag');
+    }
 }

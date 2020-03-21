@@ -66,6 +66,18 @@
       <change beforePath="$PROJECT_DIR$/../nginx.conf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post/Like.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post/Like.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post/Tag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_18_210118_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_18_210118_create_posts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_18_210528_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_18_210528_create_comments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_20_194516_create_likes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_20_194516_create_likes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_20_194557_create_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_20_194557_create_tags_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../phpunit.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../public/.htaccess" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../public/favicon.ico" beforeDir="false" />
@@ -118,7 +130,7 @@
     </execution>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -268,6 +280,9 @@
       <workItem from="1584523088898" duration="72000" />
       <workItem from="1584563906601" duration="3534000" />
       <workItem from="1584729378329" duration="1881000" />
+      <workItem from="1584733639088" duration="4186000" />
+      <workItem from="1584786644578" duration="1688000" />
+      <workItem from="1584790373149" duration="3062000" />
     </task>
     <servers />
   </component>
@@ -275,14 +290,18 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2086" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1584787518350">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2086" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1360.0.1920.1080/0.312.1360.768@1360.0.1920.1080" timestamp="1584787518350" />
     <state x="2136" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1584523158953">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state x="2136" y="311" width="424" height="491" key="FileChooserDialogImpl/1360.0.1920.1080/0.312.1360.768@1360.0.1920.1080" timestamp="1584523158953" />
-    <state width="498" height="445" key="SwitcherDM" timestamp="1584568219427">
+    <state width="498" height="445" key="SwitcherDM" timestamp="1584803980500">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="498" height="445" key="SwitcherDM/1360.0.1920.1080/0.312.1360.768@1360.0.1920.1080" timestamp="1584568219427" />
+    <state width="498" height="445" key="SwitcherDM/1360.0.1920.1080/0.312.1360.768@1360.0.1920.1080" timestamp="1584803980500" />
     <state x="1987" y="156" width="733" height="795" key="find.popup" timestamp="1584733619737">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
