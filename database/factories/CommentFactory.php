@@ -7,6 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(Comment::class, function (Faker $faker) {
     return [
-        //
+        'body'    => $faker->sentence,
+        'user_id' => \App\Models\User\User::all()->random()->id,
     ];
 });

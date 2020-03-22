@@ -11,6 +11,6 @@ class TagSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(\App\Models\Post\Tag::class, 25)->create();
     }
 }
