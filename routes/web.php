@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,11 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::apiResource('/post' , 'PostController');
-
+Route::post('/login' , 'LoginController@authenticate');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'pendaar', 'middleware' => ['auth']], function () {
+    Route::apiResource('/post', 'PostController');
+});
 
 Auth::routes();
 
