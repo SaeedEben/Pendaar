@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller
@@ -63,8 +64,8 @@ class LoginController extends Controller
         if (auth()->attempt([$fieldType => $input['username'], 'password' => $input['password']])) {
             return redirect()->route('home');
         } else {
-            return redirect()->route('login')
-                ->with('error', 'Email-Address And Password Are Wrong.');
+            return Redirect::back()
+                ->withErrors(['msg' => 'Something went Wrong!!!']);
         }
 
     }
