@@ -21,6 +21,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property User   $user
  * @property int    $user_id
  *
+ * @property Tag    $tags
+ * @property int    $tag_id
+ *
  * @property Carbon $created_at
  * @property Carbon $updated_at
  */
@@ -37,6 +40,10 @@ class Post extends Model
         self::SAD,
         self::HAPPY,
         self::POLITIC,
+    ];
+
+    protected $fillable = [
+        'title', 'body', 'category',
     ];
 
     // ------------------------------------ Relations ------------------------------------
@@ -58,6 +65,6 @@ class Post extends Model
 
     public function tags()
     {
-        return $this->belongsToMany(Tag::class, 'post_tag' , 'post_id' , 'tag_id');
+        return $this->belongsToMany(Tag::class, 'post_tag', 'post_id', 'tag_id');
     }
 }

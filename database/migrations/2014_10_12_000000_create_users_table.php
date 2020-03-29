@@ -20,10 +20,12 @@ class CreateUsersTable extends Migration
             $table->string('email')->nullable();
             $table->string('mobile')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->json('followers')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });
+
     }
 
     /**

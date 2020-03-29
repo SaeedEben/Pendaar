@@ -1,18 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    @if($errors->any())
-                        <h4 style="color : red;">{{$errors->first()}}</h4>
-                    @endif
-                    <div class="card-header" style="background-color: #7FC784">{{ __('Login') }}</div>
+
+                    <div class="card-header">{{ __('Login') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('login') }}">
+                        @if($errors->any())
+                            <div class="modal-body">
+                                <h4 class="alert text-center arrow"
+                                    style="color : red;">{{$errors->first()}}</h4>
+                            </div>
+                        @endif
+                        <form id="login" method="POST" action="{{ route('login') }}">
                             @csrf
 
                             <div class="form-group row">
@@ -21,7 +24,8 @@
 
                                 <div class="col-md-6">
                                     <input id="username" type="username"
-                                           class="form-control @error('username') is-invalid @enderror" name="username"
+                                           class="form-control @error('username') is-invalid @enderror"
+                                           name="username"
                                            value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                     @error('username')
@@ -38,7 +42,8 @@
 
                                 <div class="col-md-6">
                                     <input id="password" type="password"
-                                           class="form-control @error('password') is-invalid @enderror" name="password"
+                                           class="form-control @error('password') is-invalid @enderror"
+                                           name="password"
                                            required autocomplete="current-password">
 
                                     @error('password')
@@ -64,7 +69,10 @@
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
+
+
+                                    <button type="submit" class="btn btn-primary" data-toggle="modal"
+                                            data-target=".bd-example-modal-xl">
                                         {{ __('Login') }}
                                     </button>
 

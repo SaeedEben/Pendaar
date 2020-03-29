@@ -10,6 +10,6 @@ $factory->define(Post::class, function (Faker $faker) {
         'title'    => $faker->name,
         'body'     => $faker->sentence,
         'category' => $faker->randomElement(Post::CATEGORY),
-        'user_id'  => 1,
+        'user_id'  => \App\Models\User\User::all()->random()->id,
     ];
 });

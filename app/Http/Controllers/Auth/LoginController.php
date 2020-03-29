@@ -65,7 +65,7 @@ class LoginController extends Controller
             return redirect()->route('home');
         } else {
             return Redirect::back()
-                ->withErrors(['msg' => 'Something went Wrong!!!']);
+                ->withErrors(['msg' => 'Something went Wrong!!!'.'=>'.' check your username and password']);
         }
 
     }

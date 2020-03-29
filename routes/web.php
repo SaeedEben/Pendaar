@@ -18,15 +18,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/login' , 'LoginController@authenticate');
+Route::post('/login', 'LoginController@authenticate');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'pendaar', 'middleware' => ['auth']], function () {
-    Route::apiResource('/post', 'PostController');
+    Route::get('/post/own', 'PostController@ownIndex');
+    Route::get('/post/{post}/update', 'PostController@updatePost');
+    Route::apiResource('post', 'PostController');
+
+    Route::get('/', function () {
+        $category = \App\Models\Post\Post::CATEGORY;
+        return view('post.post', compact('category'));
+    });
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

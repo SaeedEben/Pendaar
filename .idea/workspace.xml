@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69798207-b6d9-4279-b89a-7683a912097d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/post/own.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/post/post.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/post/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/post/single.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/post/update.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Dockerfile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/Console/Kernel.php" beforeDir="false" />
@@ -66,13 +71,21 @@
       <change beforePath="$PROJECT_DIR$/../nginx.conf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/PostFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/PostFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../phpunit.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../public/.htaccess" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../public/favicon.ico" beforeDir="false" />
@@ -236,14 +249,19 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AdminPanelCore" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/post" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/app/Models/User/" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/post" />
     </key>
   </component>
   <component name="RunManager">
@@ -287,7 +305,12 @@
       <workItem from="1584984129955" duration="230000" />
       <workItem from="1584984370187" duration="14145000" />
       <workItem from="1585036974613" duration="1868000" />
-      <workItem from="1585130882973" duration="8916000" />
+      <workItem from="1585130882973" duration="14946000" />
+      <workItem from="1585212427443" duration="4781000" />
+      <workItem from="1585252308136" duration="4268000" />
+      <workItem from="1585305739608" duration="9246000" />
+      <workItem from="1585337820343" duration="2285000" />
+      <workItem from="1585386628172" duration="19376000" />
     </task>
     <servers />
   </component>
@@ -299,10 +322,10 @@
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state x="2086" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1360.0.1920.1080/0.312.1360.768@1360.0.1920.1080" timestamp="1584787518350" />
-    <state x="2136" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1584523158953">
+    <state x="2136" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1585321796594">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state x="2136" y="311" width="424" height="491" key="FileChooserDialogImpl/1360.0.1920.1080/0.312.1360.768@1360.0.1920.1080" timestamp="1584523158953" />
+    <state x="2136" y="311" width="424" height="491" key="FileChooserDialogImpl/1360.0.1920.1080/0.312.1360.768@1360.0.1920.1080" timestamp="1585321796594" />
     <state width="1809" height="293" key="GridCell.Tab.0.bottom" timestamp="1584876001650">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
@@ -319,10 +342,14 @@
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
     <state width="1809" height="293" key="GridCell.Tab.0.right/1360.0.1920.1080/0.312.1360.768@1360.0.1920.1080" timestamp="1584876001650" />
-    <state width="498" height="445" key="SwitcherDM" timestamp="1585049975047">
+    <state x="1835" y="188" width="1037" height="737" key="SettingsEditor" timestamp="1585406848301">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>
-    <state width="498" height="445" key="SwitcherDM/1360.0.1920.1080/0.312.1360.768@1360.0.1920.1080" timestamp="1585049975047" />
+    <state x="1835" y="188" width="1037" height="737" key="SettingsEditor/1360.0.1920.1080/0.312.1360.768@1360.0.1920.1080" timestamp="1585406848301" />
+    <state width="498" height="445" key="SwitcherDM" timestamp="1585414850888">
+      <screen x="1360" y="0" width="1920" height="1080" />
+    </state>
+    <state width="498" height="445" key="SwitcherDM/1360.0.1920.1080/0.312.1360.768@1360.0.1920.1080" timestamp="1585414850888" />
     <state x="1987" y="156" width="733" height="795" key="find.popup" timestamp="1584995828561">
       <screen x="1360" y="0" width="1920" height="1080" />
     </state>

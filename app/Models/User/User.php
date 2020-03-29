@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Hash;
  *
  * @property string $first_name
  * @property string $last_name
+ * @property string $full_name
  * @property string $email
  *
  * @property string $mobile
@@ -36,7 +37,6 @@ class User extends Authenticatable
     protected $fillable = [
         'first_name', 'last_name',
         'email', 'mobile',
-        'password',
     ];
 
     protected $hidden = [
@@ -45,6 +45,7 @@ class User extends Authenticatable
 
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'followers'         => 'array',
     ];
 
     // ------------------------------------ Relations ------------------------------------
